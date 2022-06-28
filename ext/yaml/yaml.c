@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  *
  * Portions of this software were inspired by Perl's YAML::LibYAML module by
- * Ingy döt Net <ingy@cpan.org>
+ * Ingy dï¿½t Net <ingy@cpan.org>
  *
  */
 
@@ -36,7 +36,7 @@
 #include "lyaml.h"
 
 #define MYNAME		"yaml"
-#define MYVERSION	MYNAME " library for " LUA_VERSION " / " VERSION
+#define MYVERSION	(MYNAME " library for " LUA_VERSION)
 
 #define LYAML__STR_1(_s)	(#_s + 1)
 #define LYAML_STR_1(_s)		LYAML__STR_1(_s)
@@ -59,7 +59,7 @@ luaopen_yaml (lua_State *L)
 
    luaL_register(L, "yaml", R);
 
-   lua_pushliteral(L, MYVERSION);
+   lua_pushstring(L, MYVERSION);
    lua_setfield(L, -2, "version");
 
    return 1;

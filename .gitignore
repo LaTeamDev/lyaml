@@ -9,3 +9,6 @@
 /luacov.*.out
 /lyaml-*.tar.gz
 /TAGS
+/.vscode
+/.xmake
+/build
